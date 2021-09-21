@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta http-equiv="cache-control" content="Public" />
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="Pizza Maker">
+	<meta name="keywords" content="Pizza Maker">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+
+	<title>Pizza Maker - Everton Cerqueira</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/dist/produtoSabores.css">
+
+</head>
+
+<body>
+	<div id="app">
+		<div class="header-component">
+			<header>
+				<!-- header-2-->
+				<div class="section-header-top red-background">
+					<div class="container">
+						<div class="row">
+						</div>
+					</div>
+				</div>
+				<!-- end header-2-->
+			</header>
+			<div class="header-section white-background" id="js-navbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3 box-logo">
+							<a href="#" class="logo" title="Ir para Home">
+								<img src="images/ic-logo-01.png" alt="Pizza Maker" />
+							</a>
+
+						</div>
+
+						<div class="col-sm-6">
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<produtoSabores></produtoSabores>
+
+	</div>
+
+	<template id="produtoSabores">
+		<section class="monte-sua-pizza">
+			<div id="myModal" class="modal fade modalProdutos" role="dialog">
+				<div class="modal-dialog modal-lg">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Selecione o Sabor <i class="fa fa-chevron-down"
+									aria-hidden="true"></i></h4>
+						</div>
+						<div class="modal-body">
+							<ul class="produto-grid row" v-if="produtos.length > 0">
+								<h5 id="salgadas" class="title-sabores">Salgadas</h5>
+
+								<li class="col-xs-6 col-md-4 col-sm-6 p-b-40" v-for="(produto, index) in produtos"
+									:key="index" :produto='produto'
+									v-if='(typeof produto.precos !="undefined" && currentCodTamanho in produto.precos) && (produto.nome_categoria =="Salgadas")'>
+
+									<a href="javascript:;" title="Selecionar Pizza!" :data-sliceTo="currentSlice"
+										@click.prevent="addRecheio(produto,currentSlice,currentArrSliceKey,index)">
+										<div class="thumbnail">
+											<template id="fotoProduto">
+												<picture>
+													<source srcset="images/pizza.webp" type="image/webp">
+													<source srcset="images/pizza.png" type="image/png">
+													<img src="images/pizza.png" :alt="produto.nome_produto">
+												</picture>
+
+											</template>
+										</div>
+										{{ produto.nome_produto }} <br>
+										<small v-if="produto.descricao">{{produto.descricao}}</small>
+										<strong>{{produto.precos[currentCodTamanho] | money}}</strong>
+
+										<i class="fa fa-plus-circle" aria-hidden="true"></i>
+									</a>
+								</li>
+
+								<h5 id="doces" class="title-sabores">Doces</h5>
+								<li class="col-xs-6 col-md-4 col-sm-6 p-b-40" v-for="(produto, index) in produtos"
+									:key="index" :produto='produto'
+									v-if='(typeof produto.precos !="undefined" && currentCodTamanho in produto.precos) && (produto.nome_categoria =="Doces")'>
+
+									<a href="javascript:;" title="Selecionar Pizza!" :data-sliceTo="currentSlice"
+										@click.prevent="addRecheio(produto,currentSlice,currentArrSliceKey,index)">
+										<div class="thumbnail">
+											<template id="fotoProduto">
+												<picture>
+													<source srcset="images/pizza.webp" type="image/webp">
+													<source srcset="images/pizza.png" type="image/png">
+													<img src="images/pizza.png" :alt="produto.nome_produto">
+												</picture>
+
+											</template>
+										</div>
+										{{ produto.nome_produto }} <br>
+										<small v-if="produto.descricao">{{produto.descricao}}</small>
+										<strong>{{produto.precos[currentCodTamanho] | money}}</strong>
+
+										<i class="fa fa-plus-circle" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+							<div v-else>Carregando...</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row mesa">
+				<div class="container">
+					<div class="col-sm-12">
+						<h2 id="h2resumopizza">
+							<span id="resumopizzatamanho">{{ tamanhoItem }}</span>
+							<span id="resumopizzaqtqqsabor">{{ qtdDivisoes }}</span>
+						</h2>
+
+					</div>
+
+					<div class="col-sm-3 col-xs-12">
+						<div id="opcoes">
+							<nav
+								:class="['nav-tamanhos nav-toggle icon-'+sanitizeTitle(tamanhoItem),{'nav-is-visible' : displayCategory}]">
+								<a @click.prevent="displayCategory = !displayCategory"
+									class="btn-toggle hide-responsive-section">{{ tamanhoItem }}</a>
+								<a @click.prevent="displayCategory = !displayCategory"
+									class="btn-toggle responsive-section">Tamanho</a>
+								<ul>
+									<li v-for="(tamanho, index) in tamanhos" :key="index"
+										@click="displayCategory = !displayCategory">
+										<a href="#" @click.prevent="mudaTamanho(tamanho.nome, tamanho.codigo)"
+											:data-codTamanho="tamanho.codigo">{{ tamanho.nome }}</a>
+									</li>
+								</ul>
+							</nav>
+							<nav
+								:class="['nav-sabores nav-toggle icon-'+sanitizeTitle(qtdDivisoes),{'nav-is-visible' : displayNavSabores}]">
+								<a @click.prevent="displayNavSabores = !displayNavSabores" class="btn-toggle">{{
+									qtdDivisoes }}</a>
+								<ul>
+									<li v-for="(divisao, index) in divisoes" :key="index"
+										@click="displayNavSabores = !displayNavSabores">
+										<a href="#" :data-numSabor="divisao.numDivisao"
+											@click.prevent="mudaDivisao(divisao.numDivisao, divisao.title)">{{
+											divisao.title }}</a>
+									</li>
+								</ul>
+							</nav>
+							<nav :class="['nav-bordas nav-toggle no-icon',{'nav-is-visible' : displayNavBordas}]"
+								v-if="extras.length > 0">
+								<a @click.prevent="displayNavBordas = !displayNavBordas"
+									class="btn-toggle hide-responsive-section">{{ currentExtra }}</a>
+								<a @click.prevent="displayNavBordas = !displayNavBordas"
+									class="btn-toggle responsive-section">Extra</a>
+								<ul>
+									<!-- 							<li>
+									<a href="#" @click.prevent="addExtra(-1)">Sem borda!</a>	
+								</li> -->
+									<li v-for="(extra, index) in extras" :key="index"
+										@click="displayNavBordas = !displayNavBordas"
+										v-if='currentCodTamanho in extra.precos'>
+										<a href="#" @click.prevent="addExtra(extra)">{{ extra.nome }} {{
+											extra.precos[currentCodTamanho] | money}}</a>
+									</li>
+								</ul>
+							</nav>
+
+
+
+						</div>
+						<a href="#" @click.prevent="valoresPadroes()" class="btn-reload">Recomeçar</a>
+					</div>
+					<div class="col-sm-6 col-xs-12">
+						<div id="pizza" class="rounded">
+
+							<div class="saboresselecionados">
+								<div id="areanomesabores">
+									<span class="lblsabor" v-for="(sabor, index) in sabores" :key="index"
+										:title="sabor.produto.nome_produto">{{ sabor.produto.nome_produto }}</a></span>
+								</div>
+								<div id="areabordas">
+									<span class="lblextra" v-for="(extra, index) in ingredientesExtra" :key="index"
+										:title="extra.title">{{ extra.nome }}</a></span>
+								</div>
+							</div>
+
+							<section class="" id="col-pizza">
+								<!-- Montagem Pizza -->
+								<!-- Pizza 1 -->
+								<div v-for="(divisao, index) in divisoes"
+									:class="['formapizza divisao-'+ divisao.numDivisao,{ 'active': index === 0 }]"
+									id="formapizza">
+									<span v-for="slice in divisao.numDivisao" :key="slice"
+										:class="'icones removesabor remsaboritem slice-'+slice+'-de-'+divisao.numDivisao"
+										title="Remover Recheio"
+										@click.prevent="removeRecheio('slice-'+slice+'-de-'+divisao.numDivisao)"></span>
+									<div class="areapizza">
+										<div v-for="slice in divisao.numDivisao" :key="slice"
+											:class="'pztop-abs slice-'+slice+'-de-'+divisao.numDivisao">
+											<div class="bgtaboa" v-if="divisao.numDivisao == 3 && slice == 1"></div>
+											<span class="fotosabmeio" v-if="divisao.numDivisao == 3 && slice == 1">
+												<template v-if="typeof produtoRecheios[slice-1] === 'undefined'">
+													<span class="linkpizza 1"
+														@click.prevent="addProduto('slice-'+slice+'-de-'+divisao.numDivisao,(slice-1))">
+												</template>
+												<template v-else>
+													<span class="linkpizza 2"
+														@click.prevent="editarRecheio('slice-'+slice+'-de-'+divisao.numDivisao,(slice-1))">
+
+												</template>
+											</span>
+											<template v-else>
+												<template v-if="typeof produtoRecheios[slice-1] === 'undefined'">
+													<span class="linkpizza add 3"
+														@click.prevent="addProduto('slice-'+slice+'-de-'+divisao.numDivisao,(slice-1))">
+
+												</template>
+												<template v-else>
+													<span class="linkpizza editar 4"
+														@click.prevent="editarRecheio('slice-'+slice+'-de-'+divisao.numDivisao,(slice-1))">
+												</template>
+											</template>
+
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- Pizza 1 -->
+								<!-- Montagem Pizza -->
+							</section>
+							<div :class="['resumo-valor',{ 'disable': !isFinished()}]">
+
+
+								<a href="#" class="btn-comprar" @click.prevent='addProdutoCarrinho()'>Comprar</a>
+
+								<span class="value"><small>R$</small>{{ order.valorTotal }}</span>
+							</div>
+
+							<div class="responsive-section value-mobile">
+								<!-- <p>Preço da pizza: {{ order.valorTotal | money}}</p> -->
+								<small>Clique sobre a parte que deseja editar.</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-12">
+						<div id="box-ingredientes" class="hide-responsive-section">
+							<div class="top-ing">
+								<p class="tit-ing" id="tit-listaing">{{tituloIngrediente}} </p>
+							</div>
+							<div v-if="ingredientes.length > 0" class="cont-ing opened" id="cont_ingredientes">
+
+								<ul>
+									<li v-for="(ingrediente, index) in ingredientes">
+										<p class="ing" :key="ingredienteRender"> s/ {{ ingrediente.nome}} </p>
+
+										<div class="switch__container">
+
+											<input v-if="(ingrediente.isSelected)"
+												@click="removeOpcao(ingrediente,currentArrSliceKey, index)"
+												title="Remover" :id="'switch-shadow-'+currentArrSliceKey+'-'+index"
+												class="switch switch--shadow checked" type="checkbox" checked="checked">
+											<input v-else @click="selecionaOpcao(ingrediente,currentArrSliceKey, index)"
+												title="Selecionar" :id="'switch-shadow-'+currentArrSliceKey+'-'+index"
+												class="switch switch--shadow" type="checkbox">
+											<label :for="'switch-shadow-'+currentArrSliceKey+'-'+index"></label>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+							<div v-else class="cont-ing" id="cont_ingredientes">
+								<ul>
+									<li>
+										<p class="ing intro">{{labelIngredientes}}</p>
+									</li>
+								</ul>
+
+							</div>
+
+						</div><!-- box-ingredientes -->
+						<div class="tempo-entrega">
+							Entrega <span>{{tempo_entrega}} min.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="responsive-section fixed-bar">
+				<div class="row">
+					<div class="col-xs-4 text-center">
+						<a href="javascript:;" data-toggle="modal" data-target="#myModalIngredientes"
+							class="btn-ingredientes"><i class="fa fa-cutlery" aria-hidden="true"></i> Editar
+							<br>
+							{{tituloIngrediente}}
+						</a>
+
+					</div>
+					<div class="col-xs-4 text-center">
+						<template v-if="(adicionais.length > 0)">
+							<a href="javascript:;" class="btn-comprar" title="Adicionar ao carrinho" data-toggle="modal"
+								data-target="#adicionalSabores"> Comprar</a>
+						</template>
+						<a v-else href="#" class="btn-comprar" @click.prevent='addProdutoCarrinho()'>Comprar</a>
+					</div>
+					<div class="col-xs-4 text-center">
+
+						<a href="javascript:;" @click.prevent='abrirCarrinho()' class="cart-shopping carrinho">
+							<span>{{ order.valorTotal | money}}</span>
+						</a>
+					</div>
+				</div>
+
+
+
+				</a>
+			</div>
+			<div id="myModalIngredientes" class="modal fade modalIngredientes" role="dialog">
+				<div class="modal-dialog modal-lg">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">{{tituloIngrediente}}</h4>
+						</div>
+						<div class="modal-body">
+							<div v-if="ingredientes.length > 0" class="cont-ing opened" id="cont_ingredientes">
+
+								<ul>
+									<li v-for="(ingrediente, index) in ingredientes">
+										<p class="ing" :key="ingredienteRender"> s/ {{ ingrediente.nome}} </p>
+
+										<div class="switch__container">
+
+											<input v-if="(ingrediente.isSelected)"
+												@click="removeOpcao(ingrediente,currentArrSliceKey, index)"
+												title="Remover" :id="'switch-shadow-'+currentArrSliceKey+'-'+index"
+												class="switch switch--shadow checked" type="checkbox" checked="checked">
+											<input v-else @click="selecionaOpcao(ingrediente,currentArrSliceKey, index)"
+												title="Selecionar" :id="'switch-shadow-'+currentArrSliceKey+'-'+index"
+												class="switch switch--shadow" type="checkbox">
+											<label :for="'switch-shadow-'+currentArrSliceKey+'-'+index"></label>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+							<div v-else class="cont-ing" id="cont_ingredientes">
+								<ul>
+									<li>
+										<p class="ing intro">{{labelIngredientes}}</p>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</template>
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+	<script type="module" src="assets/js/main.js"></script>
+
+</body>
+
+</html>

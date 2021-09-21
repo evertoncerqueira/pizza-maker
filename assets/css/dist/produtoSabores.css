@@ -1,0 +1,1496 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+}
+
+/* mesa */
+.mesa {
+  max-width: 100%;
+  padding-top: 34px;
+}
+
+.monte-sua-pizza {
+  background: url(../../../images/produtoSabores/mesa.png) no-repeat !important;
+  background-position: center top !important;
+  background-size: cover !important;
+  position: relative;
+  /* Titulos */
+  /* Pizza */
+  /* Create the bordera and the surrounding */
+  /* Hide the li elements */
+  /* Make button visible again when nav-is-visible class is toggled */
+}
+.monte-sua-pizza:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 224px;
+  height: 100%;
+  background: url(../../../images/produtoSabores/toalha.webp) repeat-y center top;
+  z-index: 1;
+  display: none;
+}
+.monte-sua-pizza #h2resumopizza {
+  font-family: "Nexa", sans-serif;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 40%;
+  padding: 22px 0;
+  margin-bottom: 7px;
+  position: relative;
+  z-index: 2;
+  background: url(../../../images/produtoSabores/bg-title.png) no-repeat;
+  background-position: center top;
+  font-size: 1.7em;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+}
+.monte-sua-pizza #h2resumopizza #resumopizzatamanho, .monte-sua-pizza #h2resumopizza #resumopizzaqtqqsabor {
+  font-family: "Nexa", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 0.9em;
+  font-style: italic;
+}
+.monte-sua-pizza #h2resumopizza #resumopizzaqtqqsabor {
+  display: block;
+  color: #23303b;
+  margin-top: 25px;
+  font-style: normal;
+  font-size: 1.45em;
+}
+.monte-sua-pizza h3 {
+  text-shadow: 0.5px 0.866px 1px black;
+  color: #fff;
+  font-weight: normal;
+}
+.monte-sua-pizza .saboresselecionados * {
+  display: inline-block;
+}
+.monte-sua-pizza #box-ingredientes {
+  width: 77%;
+  height: auto;
+  color: #333333;
+  border-bottom: 30px solid #03a9f4;
+  -webkit-border-bottom-right-radius: 30px;
+  -webkit-border-bottom-left-radius: 23px;
+  -moz-border-radius-bottomright: 23px;
+  -moz-border-radius-bottomleft: 23px;
+  border-bottom-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  margin-top: 22px;
+  margin-left: 31%;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing {
+  padding: 23px 12px 10px 23px;
+  height: 243px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul {
+  margin: 0;
+  padding: 0;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #313131;
+  margin-bottom: 14px;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li .switch__container {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing {
+  margin: 0;
+  color: #443a38;
+  clear: both;
+  font-weight: bold;
+  font-size: 1.04em;
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing.intro {
+  width: 100%;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing a {
+  float: right;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #443a38;
+  border-radius: 50%;
+  transition: all 0.5s;
+  margin-right: 2%;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing a:hover {
+  border-color: #313131;
+}
+.monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing a.active {
+  background: #443a38;
+}
+.monte-sua-pizza .top-ing {
+  border-radius: 23px 23px 0 0;
+  background-color: #03a9f4;
+  height: 38px;
+}
+.monte-sua-pizza p.tit-ing {
+  text-align: center;
+  padding: 10px 13px 8px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Nexa", sans-serif;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.monte-sua-pizza p.tit-ing .fa {
+  position: absolute;
+  right: 9%;
+  top: 24%;
+}
+.monte-sua-pizza .au-btn {
+  padding: 5px;
+}
+.monte-sua-pizza #pizza {
+  position: relative;
+}
+.monte-sua-pizza #col-pizza {
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+.monte-sua-pizza .formapizza {
+  width: 270px;
+  height: 270px;
+  display: inline-block;
+  position: relative;
+  display: none;
+  z-index: 3;
+  margin: 70px auto;
+  margin-bottom: 0px;
+}
+.monte-sua-pizza .formapizza.active {
+  display: block;
+}
+.monte-sua-pizza .formapizza.divisao-1 {
+  background-image: url(../../../images/produtoSabores/forma_1.webp);
+}
+.monte-sua-pizza .formapizza.divisao-2 {
+  background-image: url(../../../images/produtoSabores/forma_2.webp);
+}
+.monte-sua-pizza .formapizza.divisao-3 {
+  background-image: url(../../../images/produtoSabores/forma_3.webp);
+}
+.monte-sua-pizza .formapizza.divisao-4 {
+  background-image: url(../../../images/produtoSabores/forma_4.webp);
+}
+.monte-sua-pizza .areapizza {
+  width: 240px;
+  height: 240px;
+  margin: 15px 9px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.monte-sua-pizza .pztop-abs {
+  position: absolute;
+  top: 0;
+}
+.monte-sua-pizza .pztop-abs.slice-1-de-1 {
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.monte-sua-pizza .pztop-abs.slice-1-de-2 {
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+.monte-sua-pizza .pztop-abs.slice-2-de-2 {
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+.monte-sua-pizza .pztop-abs.slice-3-de-3 {
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.monte-sua-pizza .pztop-abs.slice-2-de-3 {
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background-position: right bottom;
+}
+.monte-sua-pizza .pztop-abs.slice-1-de-3 {
+  right: 24%;
+  width: 51%;
+  height: 51%;
+  z-index: 99;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -10.8%;
+  overflow: hidden;
+  -webkit-border-top-left-radius: 100%;
+  -moz-border-radius-topleft: 100%;
+  border-top-left-radius: 100%;
+}
+.monte-sua-pizza .bgtaboa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 200%;
+  height: 200%;
+  background: url(../../../images/produtoSabores/forma_meio.webp) top center no-repeat;
+  background-position: -14px -16px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.monte-sua-pizza .pztop-abs.slice-1-de-4 {
+  left: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  background-position: left top;
+}
+.monte-sua-pizza .pztop-abs.slice-2-de-4 {
+  right: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  background-position: right top;
+}
+.monte-sua-pizza .pztop-abs.slice-3-de-4 {
+  left: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  bottom: 0;
+  top: initial;
+  background-position: left bottom;
+}
+.monte-sua-pizza .pztop-abs.slice-4-de-4 {
+  right: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  bottom: 0;
+  top: initial;
+  background-position: right bottom;
+}
+.monte-sua-pizza .linkpizza {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.monte-sua-pizza .linkpizza:hover {
+  background: #333;
+  opacity: 0.3;
+}
+.monte-sua-pizza .pztop-abs.recheioPizza, .monte-sua-pizza .fotosabmeio.recheioPizza, .monte-sua-pizza .pztop-abs.recheioPizza .fotosabmeio {
+  background-image: url(../../../images/produtoSabores/pizza.webp);
+}
+.monte-sua-pizza div.slice-1-de-3 span.fotosabmeio {
+  float: left;
+  width: 200%;
+  height: 200%;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -2px;
+  margin-left: 2px;
+}
+.monte-sua-pizza .pztop-abs.slice-2-de-2 {
+  background-position: top right;
+}
+.monte-sua-pizza .icones.removesabor {
+  width: 31px;
+  height: 31px;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: url(../../../images/produtoSabores/remov-sabor.webp) no-repeat center;
+  cursor: pointer;
+}
+.monte-sua-pizza .icones.removesabor.show {
+  display: inline;
+}
+.monte-sua-pizza .icones.removesabor.slice-1-de-1 {
+  top: 18%;
+  left: 7%;
+}
+.monte-sua-pizza .icones.removesabor.slice-1-de-2 {
+  top: 19%;
+  left: 4%;
+}
+.monte-sua-pizza .icones.removesabor.slice-2-de-2 {
+  top: 19%;
+  right: 4%;
+}
+.monte-sua-pizza .icones.removesabor.slice-1-de-3 {
+  top: 4%;
+  left: 26%;
+}
+.monte-sua-pizza .icones.removesabor.slice-2-de-3 {
+  top: 62%;
+  right: 0;
+}
+.monte-sua-pizza .icones.removesabor.slice-3-de-3 {
+  top: 62%;
+}
+.monte-sua-pizza .icones.removesabor.slice-1-de-4 {
+  top: 19%;
+  left: 4%;
+}
+.monte-sua-pizza .icones.removesabor.slice-2-de-4 {
+  top: 19%;
+  right: 4%;
+}
+.monte-sua-pizza .icones.removesabor.slice-3-de-4 {
+  top: 62%;
+}
+.monte-sua-pizza .icones.removesabor.slice-4-de-4 {
+  top: 62%;
+  right: 0;
+}
+.monte-sua-pizza #areanomesabores {
+  position: absolute;
+  position: absolute;
+  right: -16%;
+  top: -2%;
+  width: 24%;
+  text-align: right;
+}
+.monte-sua-pizza #areanomesabores .lblsabor {
+  font-family: "Verdana", sans-serif;
+  background-color: #babec1;
+  color: #000000;
+  display: inline-block;
+  margin: 0;
+  border-radius: 14px;
+  padding: 10px 10px;
+  min-width: 100%;
+  min-height: 37px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.monte-sua-pizza #areabordas {
+  position: absolute;
+  left: -57px;
+  width: 22%;
+  top: 30%;
+}
+.monte-sua-pizza #areabordas .lblextra {
+  font-family: "Verdana", sans-serif;
+  background-color: #babec1;
+  color: #000000;
+  display: inline-block;
+  margin: 0;
+  border-radius: 14px;
+  padding: 10px 10px;
+  min-width: 100%;
+  min-height: 37px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.monte-sua-pizza .resumo-valor {
+  padding: 8px;
+  width: 250px;
+  margin: 0 auto;
+  background: url(../../../images/produtoSabores/bg-valor.png) no-repeat center;
+}
+.monte-sua-pizza .resumo-valor span.value {
+  display: inline-block;
+  vertical-align: top;
+  padding: 9px 2px 2px 5px;
+  color: #000000;
+  font-family: "Verdana", sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 26px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 103px;
+  font-style: italic;
+}
+.monte-sua-pizza .resumo-valor span.value small {
+  float: left;
+  font-size: 0.4em;
+  margin-right: 8px;
+  margin-top: -10px;
+  font-style: italic;
+}
+.monte-sua-pizza .resumo-valor a.btn-comprar {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  margin-left: 2%;
+  font-size: 1.8em;
+  padding: 12px 0;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family: "Verdana", sans-serif;
+  margin-top: 7px;
+  font-style: italic;
+}
+.monte-sua-pizza .resumo-valor a.btn-comprar:hover {
+  text-decoration: underline;
+}
+.monte-sua-pizza .resumo-valor.disable {
+  opacity: 0.5;
+}
+.monte-sua-pizza .tempo-entrega {
+  font-family: "Verdana", sans-serif;
+  border-radius: 24px;
+  margin-top: 11px;
+  margin-left: 32%;
+  width: 190px;
+  height: 46px;
+  padding: 13px 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-style: italic;
+  background: #FFFFFF;
+  position: relative;
+}
+.monte-sua-pizza .tempo-entrega span {
+  color: #03a9f4;
+  text-transform: lowercase;
+  font-style: normal;
+  font-size: 1.1em;
+}
+.monte-sua-pizza .tempo-entrega:before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -6px;
+  width: 39px;
+  height: 55px;
+  background: url(../../../images/produtoSabores/icon-entrega.png) no-repeat center top;
+  z-index: 1;
+}
+.monte-sua-pizza #opcoes {
+  margin-left: 9px;
+  margin-top: 32px;
+}
+.monte-sua-pizza nav.nav-toggle {
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  font-style: normal;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+.monte-sua-pizza nav.nav-toggle a.btn-toggle {
+  font-family: "Verdana", sans-serif;
+  color: #313131;
+  padding: 12px 25px 10px 47px;
+  width: 78%;
+  height: 63px;
+  display: block;
+  border-radius: 23px;
+  position: relative;
+  font-size: 1.23em;
+  font-weight: bold;
+  border-radius: 23px;
+  background-color: #FFFFFF;
+  z-index: 1;
+  -webkit-border-top-right-radius: 18px;
+  -webkit-border-bottom-right-radius: 18px;
+  -moz-border-radius-topright: 18px;
+  -moz-border-radius-bottomright: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.monte-sua-pizza nav.nav-toggle a.btn-toggle:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  color: #FFFFFF;
+  background: #03a9f4;
+  width: 26px;
+  line-height: 3em;
+  text-align: center;
+  -webkit-border-top-right-radius: 18px;
+  -webkit-border-bottom-right-radius: 18px;
+  -moz-border-radius-topright: 18px;
+  -moz-border-radius-bottomright: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.monte-sua-pizza nav.nav-toggle.icon-pizza-grande .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: url(../../../images/produtoSabores/icon-pizza-grande.webp) no-repeat;
+  background-size: 100%;
+}
+.monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+  background: url(../../../images/produtoSabores/icon-pizza-media.webp) no-repeat;
+  background-size: 100%;
+}
+.monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before {
+  background: url(../../../images/produtoSabores/icon-pizza-broto.webp) no-repeat;
+  background-size: 100%;
+}
+.monte-sua-pizza nav.nav-toggle.icon-1-sabor .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+  content: "1";
+  position: absolute;
+  left: 9px;
+  bottom: 0;
+  top: 8px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  color: #03a9f4;
+  font-size: 2.7em;
+  font-style: italic;
+  font-family: "Verdana", sans-serif;
+}
+.monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before {
+  content: "2";
+}
+.monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before {
+  content: "3";
+}
+.monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+  content: "4";
+}
+.monte-sua-pizza nav.nav-toggle.no-icon {
+  height: 71px;
+}
+.monte-sua-pizza nav.nav-toggle.no-icon a.btn-toggle {
+  padding-left: 8%;
+}
+.monte-sua-pizza nav.nav-toggle ul {
+  height: 45px;
+  padding: 0 10px;
+  text-align: left;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.3s ease;
+}
+.monte-sua-pizza nav.nav-toggle ul li {
+  position: relative;
+}
+.monte-sua-pizza nav.nav-is-visible ul {
+  height: initial;
+  background: #FFFFFF;
+  max-height: 300px;
+  margin-top: -5px;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  position: relative;
+  -webkit-box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.monte-sua-pizza nav.nav-is-visible ul li a {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 14px;
+  margin: 0;
+  border-bottom: 1px solid #313131;
+  width: 100%;
+  display: block;
+}
+.monte-sua-pizza nav.nav-is-visible ul li:last-child a {
+  border-bottom: 0;
+}
+.monte-sua-pizza nav.nav-is-visible ul li a {
+  color: #443a38;
+  font-weight: bold;
+  font-size: 1.04em;
+  line-height: 1em;
+}
+.monte-sua-pizza nav.nav-is-visible ul li a:hover {
+  color: #313131;
+  transition: color 0.5s;
+}
+.monte-sua-pizza nav.nav-is-visible ul li:last-child {
+  margin-bottom: 10px;
+}
+.monte-sua-pizza nav.nav-is-visible #category-btn {
+  display: block;
+}
+.monte-sua-pizza a.btn-reload {
+  font-family: "Verdana", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1em;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  display: block;
+  width: 61%;
+  margin-top: 10px;
+  min-height: 38px;
+  padding-left: 53px;
+  padding-top: 14px;
+  padding-right: 5px;
+  border-radius: 20px;
+  margin-top: 23px;
+  margin-left: 25px;
+  color: #313131;
+  position: relative;
+}
+.monte-sua-pizza a.btn-reload:before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  border-radius: 50%;
+  height: 53px;
+  width: 53px;
+  background: url(../../../images/produtoSabores/icon-restart.webp) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: #FFFFFF;
+}
+.monte-sua-pizza a.btn-reload:hover {
+  transition: all 0.5s;
+  color: black;
+}
+.monte-sua-pizza .modalProdutos .modal-content {
+  border-radius: 23px 23px 0 0;
+}
+.monte-sua-pizza .modalProdutos .modal-header {
+  padding: 0;
+  background-color: #313131;
+}
+.monte-sua-pizza .modalProdutos .modal-header h4 {
+  text-align: left;
+  white-space: nowrap;
+  padding: 10px 15px 10px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Nexa", sans-serif;
+  color: #FFFFFF;
+  position: relative;
+}
+.monte-sua-pizza .modalProdutos .modal-header h4 .fa {
+  position: absolute;
+  right: 9%;
+  top: 24%;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li {
+  font-family: "Verdana", sans-serif;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #313131;
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  min-height: 320px;
+  z-index: 2;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li strong {
+  font-weight: bold;
+  display: block;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li .thumbnail {
+  width: 100%;
+  display: block;
+  height: 165px;
+  text-align: center;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li .thumbnail img, .monte-sua-pizza .modalProdutos .produto-grid li .thumbnail picture {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li a {
+  display: block;
+  margin-top: 5px;
+  color: #000000;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li a:hover {
+  color: #313131;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li a:hover .fa {
+  color: #4b4b4b;
+}
+.monte-sua-pizza .modalProdutos .produto-grid li .fa {
+  font-size: 30px;
+  color: #313131;
+  display: block;
+}
+
+/* Estilo iOS */
+.switch__container {
+  width: 62px;
+}
+
+.switch {
+  visibility: hidden;
+  position: absolute;
+  margin-left: -9999px;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch--shadow + label {
+  padding: 2px;
+  width: 55px;
+  height: 28px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+.switch--shadow + label:after {
+  width: 26px;
+  background-color: #23303b;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch--shadow:checked {
+  border: 5px solid red;
+}
+
+/*   .switch--shadow:checked + label:before {
+    background-color: #8ce196;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(28px);
+  } */
+.switch--shadow.checked + label:before {
+  background-color: #06b423;
+}
+
+.switch--shadow.checked + label:after {
+  transform: translateX(28px);
+}
+
+.modalIngredientes .cont-ing {
+  padding: 23px 12px 10px 23px;
+  height: 243px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+}
+.modalIngredientes .cont-ing ul {
+  margin: 0;
+  padding: 0;
+}
+.modalIngredientes .cont-ing ul li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #313131;
+  margin-bottom: 14px;
+}
+.modalIngredientes .cont-ing ul li .switch__container {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+.modalIngredientes .cont-ing ul li p.ing {
+  margin: 0;
+  color: #443a38;
+  clear: both;
+  font-weight: bold;
+  font-size: 1.04em;
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+}
+.modalIngredientes .cont-ing ul li p.ing.intro {
+  width: 100%;
+}
+.modalIngredientes .cont-ing ul li p.ing a {
+  float: right;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #443a38;
+  border-radius: 50%;
+  transition: all 0.5s;
+  margin-right: 2%;
+}
+.modalIngredientes .cont-ing ul li p.ing a:hover {
+  border-color: #313131;
+}
+.modalIngredientes .cont-ing ul li p.ing a.active {
+  background: #443a38;
+}
+
+.responsive-section {
+  display: none !important;
+}
+
+@media screen and (max-width: 1920px) {
+  .monte-sua-pizza .resumo-valor {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .monte-sua-pizza #opcoes {
+    margin-left: 0;
+  }
+  .monte-sua-pizza #areanomesabores {
+    width: 18%;
+  }
+  .monte-sua-pizza #areanomesabores .lblsabor {
+    text-align: center;
+    padding: 8px;
+  }
+
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle {
+    width: 100%;
+  }
+
+  .monte-sua-pizza #box-ingredientes {
+    width: 90%;
+    margin-left: 11%;
+  }
+
+  .monte-sua-pizza a.btn-reload {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .monte-sua-pizza #box-ingredientes .cont-ing {
+    padding: 13px 13px 8px 8px;
+  }
+  .monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing {
+    width: 100%;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .monte-sua-pizza #box-ingredientes .cont-ing ul li .switch__container {
+    width: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+  .monte-sua-pizza #pizza {
+    padding-top: 35px;
+  }
+  .monte-sua-pizza #areanomesabores {
+    width: 100%;
+    top: 67px;
+    z-index: 3;
+    text-align: left;
+  }
+  .monte-sua-pizza #areanomesabores .lblsabor {
+    display: inline-block;
+    width: initial;
+    min-width: initial;
+    margin-right: 5px;
+  }
+  .monte-sua-pizza #areabordas {
+    left: -26px;
+  }
+
+  .monte-sua-pizza #h2resumopizza {
+    width: 400px;
+  }
+
+  .monte-sua-pizza .tempo-entrega {
+    margin-left: 0;
+  }
+
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle {
+    font-size: 0.9em;
+  }
+
+  .monte-sua-pizza a.btn-reload {
+    margin-left: 0;
+  }
+
+  .monte-sua-pizza #box-ingredientes {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .monte-sua-pizza #opcoes {
+    text-align: center;
+  }
+  .monte-sua-pizza nav.nav-toggle {
+    width: auto;
+    height: 71px;
+  }
+  .monte-sua-pizza nav.nav-toggle {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle {
+    padding: 38px 30px 10px 30px;
+    text-align: center;
+  }
+  .monte-sua-pizza a.btn-reload {
+    min-width: initial;
+    margin: 5px auto;
+    width: 160px;
+    position: relative;
+    z-index: 4;
+    line-height: 1.3em;
+  }
+  .monte-sua-pizza #pizza {
+    padding-top: 0;
+  }
+  .monte-sua-pizza #box-ingredientes {
+    position: relative;
+    z-index: 2;
+  }
+  .monte-sua-pizza #box-ingredientes .cont-ing ul li p.ing {
+    text-align: center;
+  }
+  .monte-sua-pizza #col-pizza {
+    position: relative;
+    z-index: 2;
+  }
+  .monte-sua-pizza .mesa {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+  .monte-sua-pizza nav.nav-is-visible ul {
+    z-index: 6;
+  }
+  .monte-sua-pizza #areanomesabores {
+    width: 24%;
+  }
+  .monte-sua-pizza #areabordas {
+    top: 0;
+  }
+  .monte-sua-pizza #col-pizza {
+    height: 285px;
+  }
+
+  .monte-sua-pizza nav.nav-toggle.icon-pizza-grande .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-1-sabor .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+    left: 0;
+    top: 2%;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .monte-sua-pizza #opcoes {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .monte-sua-pizza nav.nav-toggle {
+    width: 30%;
+    height: 71px;
+  }
+
+  .monte-sua-pizza .tempo-entrega {
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 19px;
+  }
+
+  .monte-sua-pizza .resumo-valor {
+    margin: 10px auto;
+    display: block;
+  }
+}
+@media screen and (max-width: 640px) {
+  .monte-sua-pizza {
+    background: url(../../../images/produtoSabores/mesa-640.png) no-repeat !important;
+    background-repeat: repeat-y !important;
+  }
+  .monte-sua-pizza #h2resumopizza {
+    width: 355px;
+  }
+  .monte-sua-pizza nav.nav-toggle {
+    height: 50px;
+  }
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle {
+    padding: 15px 40px 10px 23px;
+  }
+  .monte-sua-pizza nav.nav-toggle.no-icon a.btn-toggle {
+    height: 64px;
+    padding-top: 11px;
+  }
+  .monte-sua-pizza #areanomesabores {
+    width: 16%;
+  }
+  .monte-sua-pizza #areanomesabores .lblsabor {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .monte-sua-pizza nav.nav-toggle.icon-pizza-grande .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-1-sabor .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .monte-sua-pizza {
+    padding-bottom: 30px;
+  }
+  .monte-sua-pizza .formapizza {
+    margin-top: 0;
+  }
+  .monte-sua-pizza #h2resumopizza {
+    width: 100%;
+    font-size: 1.2em;
+    display: none;
+  }
+  .monte-sua-pizza .btn-reload, .monte-sua-pizza .tempo-entrega, .monte-sua-pizza .resumo-valor, .monte-sua-pizza .saboresselecionados, .monte-sua-pizza .areanomesabores {
+    display: none !important;
+  }
+  .monte-sua-pizza nav.nav-toggle {
+    height: 56px;
+    border-radius: 0;
+    margin-right: 2px;
+    width: 70px;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-pizza-grande .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -19px;
+    margin: auto;
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url(../../../images/produtoSabores/icon-pizza-grande.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+    background: url(../../../images/produtoSabores/icon-pizza-media.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before {
+    background: url(../../../images/produtoSabores/icon-pizza-broto.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-1-sabor .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before, .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -19px;
+    margin: auto;
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url(../../../images/produtoSabores/forma_1.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before {
+    background: url(../../../images/produtoSabores/forma_2.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before {
+    background: url(../../../images/produtoSabores/forma_3.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+    background: url(../../../images/produtoSabores/forma_4.webp) no-repeat;
+    background-size: contain;
+  }
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle:after {
+    display: none;
+  }
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle {
+    border-radius: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+    width: 70px;
+    padding-top: 38px;
+  }
+  .monte-sua-pizza nav.nav-toggle a.btn-toggle:before {
+    display: block;
+  }
+  .monte-sua-pizza nav.nav-toggle.no-icon {
+    width: 70px;
+    margin-bottom: 0;
+  }
+  .monte-sua-pizza nav.nav-toggle.no-icon a.btn-toggle {
+    border-radius: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    background: #FFFFFF;
+    margin-bottom: 0;
+    color: #8d1b1b;
+    width: 70px;
+    padding-top: 38px;
+  }
+  .monte-sua-pizza nav.nav-toggle.no-icon a.btn-toggle:before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 23px;
+    top: -25px;
+    bottom: 0;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+  }
+  .monte-sua-pizza #opcoes {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+  }
+  .monte-sua-pizza .hide-responsive-section {
+    display: none !important;
+  }
+  .monte-sua-pizza .responsive-section {
+    display: block !important;
+  }
+  .monte-sua-pizza .responsive-section.fixed-bar {
+    position: fixed;
+    padding-top: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    height: 100px;
+    border-top: 4px solid #8d1b1b;
+    z-index: 10;
+    border-bottom: 1px solid #969696;
+  }
+  .monte-sua-pizza .responsive-section.fixed-bar .col-xs-4 {
+    border-right: 1px solid #8d1b1b;
+    min-height: 60px;
+  }
+  .monte-sua-pizza .responsive-section .btn-comprar {
+    background: #129b49;
+    color: #FFFFFF;
+    z-index: 10;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .monte-sua-pizza .responsive-section .btn-ingredientes {
+    color: #8d1b1b;
+    text-align: center;
+    z-index: 10;
+    font-size: 12px;
+    letter-spacing: 0;
+    padding: 4px 7px;
+    margin-left: 5%;
+    display: block;
+  }
+  .monte-sua-pizza .responsive-section .btn-ingredientes i {
+    display: block;
+  }
+  .monte-sua-pizza .responsive-section .cart-shopping {
+    display: block;
+    margin: 0 auto;
+    width: 85px;
+    height: 38px;
+    position: relative;
+    padding-top: 10px;
+  }
+  .monte-sua-pizza .responsive-section .cart-shopping span {
+    color: #8d1b1b;
+  }
+  .monte-sua-pizza .responsive-section .cart-shopping:before {
+    content: "";
+    background: transparent url(../../../images/sprite.webp) no-repeat scroll -16px -106px;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    transform: scale(0.7);
+    display: none;
+  }
+  .monte-sua-pizza .value-mobile {
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 3;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .monte-sua-pizza .value-mobile p {
+    margin: 0;
+  }
+  .monte-sua-pizza nav.nav-is-visible ul, .monte-sua-pizza nav.nav-toggle.no-icon.nav-is-visible ul {
+    width: 100%;
+    padding: 0 2px;
+    background: #FFFFFF;
+  }
+  .monte-sua-pizza nav.nav-is-visible ul li a, .monte-sua-pizza nav.nav-toggle.no-icon.nav-is-visible ul li a {
+    font-size: 0.9em;
+    text-align: center;
+    color: #443a38;
+    border-bottom: 1px solid #8d1b1b;
+  }
+
+  .monte-sua-pizza .mesa {
+    padding-top: 0;
+  }
+
+  .monte-sua-pizza #opcoes {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding: 5px 0;
+  }
+
+  .monte-sua-pizza #box-ingredientes .cont-ing {
+    height: 75px;
+  }
+
+  .monte-sua-pizza #box-ingredientes .cont-ing.opened {
+    height: 200px;
+  }
+
+  .produto-grid {
+    max-height: 60vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .produto-grid li {
+    min-height: initial;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .monte-sua-pizza .modalProdutos .produto-grid li {
+    min-height: initial;
+    border-bottom: none;
+  }
+  .monte-sua-pizza .modalProdutos .produto-grid li .thumbnail {
+    height: auto;
+  }
+  .monte-sua-pizza .modalProdutos .produto-grid li .thumbnail img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .monte-sua-pizza #areanomesabores {
+    top: 0;
+    width: 100%;
+  }
+  .monte-sua-pizza #areanomesabores .lblsabor {
+    margin-bottom: 5px;
+  }
+  .monte-sua-pizza #areabordas {
+    top: 21%;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+  }
+  .monte-sua-pizza #pizza {
+    padding-top: 0;
+  }
+  .monte-sua-pizza .resumo-valor {
+    width: 180px;
+  }
+  .monte-sua-pizza a.btn-reload {
+    margin-top: 0;
+  }
+}
+html.no-webp .monte-sua-pizza {
+  background: url(../../../images/produtoSabores/mesa.png) no-repeat !important;
+}
+html.no-webp .monte-sua-pizza:before {
+  background: url(../../../images/produtoSabores/toalha.png) repeat-y center top;
+}
+html.no-webp #h2resumopizza {
+  background: url(../../../images/produtoSabores/bg-title.png) no-repeat;
+}
+html.no-webp .formapizza.divisao-1 {
+  background-image: url(../../../images/produtoSabores/forma_1.png);
+}
+html.no-webp .formapizza.divisao-2 {
+  background-image: url(../../../images/produtoSabores/forma_2.png);
+}
+html.no-webp .formapizza.divisao-3 {
+  background-image: url(../../../images/produtoSabores/forma_3.png);
+}
+html.no-webp .formapizza.divisao-4 {
+  background-image: url(../../../images/produtoSabores/forma_4.png);
+}
+html.no-webp .bgtaboa {
+  background: url(../../../images/produtoSabores/forma_meio.png) top center no-repeat;
+}
+html.no-webp .pztop-abs.recheioPizza, html.no-webp .fotosabmeio.recheioPizza, html.no-webp .pztop-abs.recheioPizza .fotosabmeio {
+  background-image: url(../../../images/produtoSabores/pizza.png);
+}
+html.no-webp .icones.removesabor {
+  background: url(../../../images/produtoSabores/remov-sabor.png) no-repeat center;
+}
+html.no-webp .tempo-entrega {
+  background: url(../../../images/produtoSabores/motoboy.png) no-repeat center 10px;
+  background-color: #FFFFFF;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-pizza-grande .btn-toggle:before, html.no-webp .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before, html.no-webp .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+  background: url(../../../images/produtoSabores/icon-pizza-grande.png);
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-pizza-media .btn-toggle:before {
+  background: url(../../../images/produtoSabores/icon-pizza-media.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-pizza-broto .btn-toggle:before {
+  background: url(../../../images/produtoSabores/icon-pizza-broto.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-1-sabor .btn-toggle:before, html.no-webp .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before, html.no-webp .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before, html.no-webp .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+  background: url(../../../images/produtoSabores/forma_1.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-2-sabores .btn-toggle:before {
+  background: url(../../../images/produtoSabores/forma_2.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-3-sabores .btn-toggle:before {
+  background: url(../../../images/produtoSabores/forma_3.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp .monte-sua-pizza nav.nav-toggle.icon-4-sabores .btn-toggle:before {
+  background: url(../../../images/produtoSabores/forma_4.png) no-repeat;
+  background-size: contain;
+}
+html.no-webp a.btn-reload:before {
+  background: url(../../../images/produtoSabores/icon-restart.png) no-repeat;
+  background-color: #FFFFFF;
+  background-position: center center;
+}
+
+.filtro-sabores {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+.filtro-sabores li {
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: 1px solid #bdb7b7;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+.filtro-sabores li:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 50%;
+  height: 2px;
+  background: #a81f23;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: block;
+}
+.filtro-sabores li a {
+  display: block;
+  color: #000000;
+}
+
+.title-sabores {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  width: 100%;
+  border-bottom: 1px solid #bdb7b7;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+.title-sabores:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 50%;
+  height: 2px;
+  background: #a81f23;
+  margin: auto;
+  left: 0;
+  display: block;
+}
+
+ul.produto-grid {
+  list-style-type: none;
+}
